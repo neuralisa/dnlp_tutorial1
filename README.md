@@ -1,13 +1,6 @@
 # PyTorch for NLP
 
-1. [MNIST](01-mnist.ipynb)
-2. [GloVe text classification](02-headlines.ipynb)
-3. [Build the NER model](03-ner.ipynb)
-4. [Evaluate and submit the checkpoint](04-ner-evaluation.ipynb)
-5. [RNN tagging](05-rnn-ner.ipynb)
-6. [RNN and bidirectional RNN](06-rnn-birnn.ipynb)
-
-## Run
+Start with [MNIST](01-mnist.ipynb) and [GloVe text classification](02-headlines.ipynb), then work through [building the NER model](03-ner.ipynb) and [evaluation and submission](04-ner-evaluation.ipynb), before trying [RNN tagging](05-rnn-ner.ipynb) and the [bidirectional RNN comparison](06-rnn-birnn.ipynb).
 
 ```sh
 git clone https://github.com/neuralisa/dnlp_tutorial1.git
@@ -18,25 +11,10 @@ python -m pip install -r requirements.txt
 python -m jupyterlab
 ```
 
-On Windows, activate with `.venv\Scripts\activate`.
-Open a notebook and run its cells in order. CPU is sufficient.
-The MNIST sample and headline GloVe vectors are included.
+On Windows, activate the environment with `.venv\Scripts\activate`, then open a notebook in Jupyter and run its cells in order; all six notebooks can run on CPU.
 
-Notebooks 4–6 need the course-provided files in:
+The MNIST sample and headline GloVe vectors are included, while notebooks 4–6 also need the course-provided `train.txt`, `valid.txt` and `test.txt` files in `data/conll2003/`, with the supplied utility scripts kept beside the notebooks.
 
-```text
-data/conll2003/train.txt
-data/conll2003/valid.txt
-data/conll2003/test.txt
-```
-
-Keep the supplied NER utility and evaluation scripts beside the notebooks.
-The RNN notebook trains 32-dimensional embeddings by default; placing `glove.6B.100d.txt` in this folder enables its GloVe option.
+The included vectors come from [Stanford GloVe](https://nlp.stanford.edu/projects/glove/) under PDDL, the NER utilities come from the [course repository](https://github.com/neuralisa/tuw-dnlp-ner-2026s), and MNIST source checksums are in `data/mnist-source.json`.
 
 [Interactive session](https://neuralisa.com/dnlp/ner-lab/tutorials.html) · [Submit a checkpoint](https://neuralisa.com/ner-challenge/)
-
-## Data and code
-
-MNIST: 128 training images and 32 test images, with source checksums in `data/mnist-source.json`.
-GloVe: included 100-dimensional rows from [Stanford GloVe 6B](https://nlp.stanford.edu/projects/glove/), released under PDDL. Headlines and the small NER examples are authored teaching data.
-The checkpoint utilities and evaluator come from [the course repository](https://github.com/neuralisa/tuw-dnlp-ner-2026s/tree/a4a5e1118d6abbee70a6c95203f4811cdd193770).
