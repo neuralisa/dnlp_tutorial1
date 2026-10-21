@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+data/conll2003
+course-data/
+*.pt
+*.npy
+evaluation_results.json
+glove.6B.100d.txt
